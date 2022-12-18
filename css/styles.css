@@ -479,6 +479,7 @@ img {
 
 .address-list {
   padding: 0;
+  padding-bottom: 60px;
   margin: 0;
   width: 231px;
 
@@ -492,9 +493,7 @@ img {
   color: var(--primary-white-color);
   text-decoration: none;
 }
-.address-info {
-  padding-bottom: 60px;
-}
+
 .address-info .link {
   color: rgba(255, 255, 255, 0.6);
 }
