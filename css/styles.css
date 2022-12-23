@@ -776,19 +776,21 @@ img {
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0) rotateZ(0deg);
 }
+
 .modal {
   position: absolute;
+  width: 100%;
+  max-width: 528px;
+  height: 100%;
+  max-height: 581px;
   top: 50%;
   left: 50%;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
-  min-width: 528px;
-  min-height: 581px;
 
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-
   transition: transform var(--duration-function) var(--timing-function);
 }
 
@@ -838,16 +840,20 @@ img {
   width: 448px;
   margin: 0;
 }
+
+.form-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
 .form-field {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: var(--primary-text-color);
 }
 
 .form-input {
@@ -856,7 +862,6 @@ img {
   padding-left: 42px;
   padding-top: 11px;
   padding-bottom: 11px;
-  margin: 4px 0 0 0;
   color: var(--title-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -871,9 +876,9 @@ img {
   position: absolute;
   top: 50%;
   left: 15px;
-  display: inline-block;
   width: 18px;
   height: 18px;
+  transform: translateY(-50%);
   fill: currentColor;
   transition: color var(--duration-function) var(--timing-function);
 }
@@ -940,14 +945,14 @@ img {
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-  fill: var(--primary-white-color);
+  fill: transparent;
 }
 
 .checkbox:checked + .icon-checkbox {
   border: transparent;
   background-color: var(--accent-color);
   background-origin: border-box;
-  color: var(--primary-white-color);
+  fill: var(--primary-white-color);
 }
 .form-link {
   display: inline-block;
